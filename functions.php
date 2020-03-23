@@ -26,6 +26,17 @@ $lots = [
 
 
 $user_name = 'Алексей'; // укажите здесь ваше имя
+date_default_timezone_set("Europe/Moscow");
+
+$ts= time();
+$secsInDay = 86400;
+$tsNight= strtotime('tomorrow');
+$secsToNight = $tsNight - $ts;
+
+$hours = floor($secsToNight / 3600);
+$minutes= floor(($secsToNight% 3600 ) / 60);
+$timer = $hours . " : " . $minutes;
+
 function include_template($name, $data){
     $name = 'templates/' . $name;
     $result = '';

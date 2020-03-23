@@ -3,7 +3,8 @@ require_once ('functions.php');
 
 $page_content = include_template ('index.php', [
 'categoryi_tovarov' => $categoryi_tovarov,
-'lots' => $lots
+'lots' => $lots,
+'timer'=> $timer
 ]);
 
 $layout_content = include_template('layout.php', [
